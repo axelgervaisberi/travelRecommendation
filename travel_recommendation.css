@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  background-image: url(./assets/img/main-bg-img.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Header Section Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: darkcyan;
+  color: white;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.logo-container i {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.logo-container h1 {
+  font-size: 24px;
+}
+
+/* Navigation Styling */
+nav {
+  flex: 2;
+  text-align: center;
+}
+
+.nav-link-container {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link-container li {
+  margin: 0 20px;
+  width: 120px;
+  padding: 10px 0;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: darkcyan;
+}
+
+.nav-link-container li:hover {
+  background-color: white;
+  color: darkcyan;
+}
+
+.nav-link-container li:hover a {
+  color: darkcyan;
+}
+
+.nav-link-container li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.nav-link-container li a:hover {
+  color: darkcyan;
+}
+
+/* Search Container Styling */
+.search-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 12px 40px 12px 15px; /* Space for buttons and icon */
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+}
+
+.search-container input::placeholder {
+  color: darkcyan;
+}
+
+.search-container input:focus {
+  outline: none;
+}
+
+/* Search Icon Inside Input */
+.search-container i {
+  position: absolute;
+  right: 11%;
+  font-size: 18px;
+  color: darkcyan;
+  cursor: pointer;
+}
+
+/* Search Button Inside Input */
+.search-container button {
+  position: absolute; /* Adjust based on icon and button size */
+  background-color: darkcyan;
+  border: none;
+  color: white;
+  width: 70px;
+  padding: 8px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.search-container #btnSearch {
+  right: 6.5%;
+}
+
+.search-container #btnClear {
+  right: 2%;
+}
+
+main {
+  height: 91.3vh;
+  background: linear-gradient(
+    to right,
+    rgba(0, 36, 36, 0.7),
+    rgba(255, 255, 255, 0.1)
+  );
+  display: flex;
+  padding: 20px;
+}
+
+.social-media-link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-right: 100px;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 300px;
+  margin-bottom: 100px;
+  background-color: white;
+}
+
+.social-media-link-container a {
+  margin-bottom: 30px;
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-media-link-container a:hover {
+  color: darkcyan;
+}
+
+.home-container {
+  margin-top: 160px;
+}
+
+.home-container h2 {
+  text-transform: uppercase;
+  text-align: justify;
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.home-container p {
+  width: 350px;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.home-container a {
+  background-color: rgba(0, 139, 139, 0.7);
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.home-container a:hover {
+  background-color: white;
+  color: darkcyan;
+  border: 1px solid darkcyan;
+}
+
+.search-result-container {
+  display: none;
+  width: 400px;
+  height: 900px;
+  overflow-y: scroll;
+  position: fixed;
+  right: 4%;
+}
+
+.search-result-container h2 {
+  background-color: rgb(0, 85, 85);
+  color: white;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 6px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+.search-result-container ul {
+  list-style: none;
+}
+
+.search-result-container ul li {
+  background-color: white;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+}
+.search-result-container ul li img {
+  width: 100%;
+  object-fit: cover;
+
+  border: none;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 15px;
+}
+
+.search-result-container .result-info {
+  margin-left: 10px;
+}
+
+.search-result-container .result-info h3,
+.search-result-container .result-info p {
+  margin-bottom: 16px;
+}
+
+.search-result-container .result-info button {
+  background-color: darkcyan;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-result-container .result-info button:hover {
+  background-color: rgb(0, 85, 85);
+}
+
+/*=========== About Us ========== */
+
+.about-container {
+  margin-top: 20px;
+}
+
+.about-container h2 {
+  text-transform: uppercase;
+  text-align: justify;
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.about-container > p {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 90%;
+  padding: 20px;
+  line-height: 2;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 200px;
+}
+
+.team-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.team-section h3 {
+  font-size: 4rem;
+  color: white;
+}
+
+.team-section .team-members {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.team-members .team-member {
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  background-color: darkcyan;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+.team-member i {
+  font-size: 4rem;
+  color: white;
+}
+
+.team-member .info p {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.team-member .info p:nth-of-type(2) {
+  font-weight: 300;
+}
+
+.team-member .info .name {
+  font-size: 1.5rem;
+}
+
+.team-member .info .position {
+  background-color: white;
+  padding: 5px 10px;
+  color: darkcyan;
+  border-radius: 5px;
+  border: 1px solid darkcyan;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/*=========== Contact Us ========== */
+
+.contact-us-container {
+  width: 100%;
+  display: flex;
+  gap: 200px;
+}
+
+.contact-us-container .title {
+  margin-top: 350px;
+}
+
+.contact-us-container .title h2 {
+  font-size: 5rem;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.contact-us-container .title p {
+  color: white;
+  font-weight: 300;
+}
+
+.contact-us-container .contact-form-container {
+  margin-top: 250px;
+  width: 50%;
+  height: 53%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.7px);
+  color: white;
+}
+
+.contact-us-container .contact-form-container input,
+.contact-us-container .contact-form-container textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid rgba(211, 211, 211, 0.5);
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-us-container .contact-form-container input::placeholder,
+.contact-us-container .contact-form-container textarea::placeholder {
+  color: rgba(211, 211, 211, 0.5);
+}
+
+.contact-us-container .contact-form-container input:focus,
+.contact-us-container .contact-form-container textarea:focus {
+  outline: none;
+  border-color: darkcyan;
+}
+
+.contact-us-container .contact-form-container textarea {
+  height: 130px;
+}
+
+.contact-us-container .contact-form-container button {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: darkcyan;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-us-container .contact-form-container button:hover {
+  background-color: white;
+  color: darkcyan;
+  border: 1px solid darkcyan;
+}
